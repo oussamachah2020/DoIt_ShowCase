@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #060d0d;
+}
+
+/* .logo_label {
+    font-family: 'Darumadrop One', sans-serif;
+} */
+
+.animated-border {
+  border: 3px solid;
+  border-radius: 1px;
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0.678), rgba(255, 255, 253, 0.699)) 1;
+
+  --angle: 0deg;
+  /* … */
+  border-image: linear-gradient(var(--angle), rgba(0, 0, 0, 0.678), rgba(255, 255, 253, 0.699)) 1;
+  animation: 5s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
