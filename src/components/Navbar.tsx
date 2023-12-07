@@ -5,7 +5,6 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
-  Button,
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
@@ -13,22 +12,11 @@ import {
 import Discord from "@/assets/dark_mode_icons/discord-dark.svg";
 import Github from "@/assets/dark_mode_icons/github-dark.svg";
 
-import Logo from "@/assets/logo.svg"
+import Logo from "@/assets/logo.svg";
 export default function TopBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
+  const menuItems = ["Home", "Features", "Technologies"];
 
   return (
     <Navbar
@@ -48,18 +36,18 @@ export default function TopBar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
+          <Link href="#home" className="text-white">
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link href="#features" aria-current="page" className="text-white">
+            Features
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="#technologies" className="text-white">
+            Technologies
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -67,7 +55,9 @@ export default function TopBar() {
         <button onClick={() => window.open("https://discord.gg/TyRk4RZ9")}>
           <img src={Discord} width={28} height={28} />
         </button>
-        <button onClick={() => window.open("https://discord.gg/TyRk4RZ9")}>
+        <button
+          onClick={() => window.open("https://github.com/oussamachah2020/DoIt")}
+        >
           <img src={Github} width={28} height={28} />
         </button>
       </NavbarContent>
@@ -83,7 +73,7 @@ export default function TopBar() {
                   : "foreground"
               }
               className="w-full"
-              href="#"
+              href={`#${item}`}
               size="lg"
             >
               {item}

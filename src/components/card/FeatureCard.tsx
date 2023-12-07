@@ -8,7 +8,7 @@ type Props = {
 
 const FeatureCard = ({ title, image, description }: Props) => {
   return (
-    <Card className="animated-border bg-gradient-to-br border-2 from-[#000000cc] to-[#060D0D] col-span-12 sm:col-span-4 w-[90%] h-[100%] group">
+    <Card className="animated-border bg-gradient-to-br border-2 from-[#000000cc] to-[#060D0D] col-span-12 sm:col-span-4 w-[90%] md:w-[40%] h-[100%] group">
       <CardHeader className="absolute z-10 top-0 flex-col !items-start">
         <p className="text-md text-white/80 uppercase font-bold">{title}</p>
         <h4 className="text-white font-medium text-large">{description}</h4>

@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TopBar from "@/components/Navbar";
-import AOS from "aos";
 
 type Props = {
   children: React.ReactNode;
